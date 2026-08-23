@@ -50,7 +50,7 @@ pnpm --filter @gibrr/web dev          # Web on http://localhost:3000
 
 Or run both at once from the root: `pnpm dev`.
 
-## Verify the federation skeleton
+## Verify the setup
 
 With the API running and seeded:
 
@@ -65,12 +65,12 @@ curl -H "Accept: application/activity+json" http://localhost:4000/users/testuser
 # ActivityPub Actor JSON-LD, including a publicKey block
 ```
 
-Visit `http://localhost:3000` — the landing page fetches `/health` from the
-API live to confirm the two apps are connected.
+Visit `http://localhost:3000` and log in as `testuser` to see the feed and
+profile.
 
-Note: full external federation (e.g. following `testuser@localhost` from a
-real Mastodon instance) isn't testable without a public domain and TLS —
-that's the natural next milestone once real feed/profile features exist.
+Note: external federation (e.g. following `testuser@localhost` from a real
+Mastodon instance) isn't testable without a public domain and TLS — that
+requires a real deployment (see below).
 
 ## Deploying your own instance
 
